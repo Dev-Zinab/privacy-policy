@@ -8,7 +8,20 @@
 </head>
 <body>
     <h1>سياسة الخصوصية لتطبيق وصل</h1>
-    <p><strong>آخر تحديث:</strong> 20/11/2024</p>
+    <p><strong>آخر تحديث:</strong> 
+    <script>
+        // الحصول على التاريخ الحالي وتنسيقه
+        const today = new Date();
+        const formattedDate = today.toLocaleDateString('ar-EG', {
+            day: 'numeric',
+            month: 'numeric',
+            year: 'numeric'
+        });
+
+        // إدراج التاريخ في العنصر المحدد
+        document.getElementById('last-updated').textContent = formattedDate;
+    </script>
+</p>
 
     <h2>1. المعلومات التي نجمعها:</h2>
     <h3>الوصول إلى الكاميرا:</h3>
