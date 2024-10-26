@@ -1,5 +1,6 @@
-<!DOCTYPE html>
 
+
+<!DOCTYPE html>
 <html lang="ar">
 <head>
   <meta charset="UTF-8">
@@ -12,45 +13,40 @@
       margin: 0;
       padding: 20px;
       line-height: 1.6;
-      direction: rtl; /* لضبط الاتجاه لليمين */
-      text-align: right; /* محاذاة النصوص لليمين */
     }
-    h1 {
-      text-align: center;
-      color: #333;
+
+    /* تنسيق النصوص العربية */
+    .arabic {
+      direction: rtl;
+      text-align: right;
     }
-    h2 {
-      color: #444;
-      margin-top: 20px;
+
+    /* تنسيق النصوص الإنجليزية */
+    .english {
+      direction: ltr;
+      text-align: left;
     }
-    p {
-      margin: 10px 0;
-      color: #555;
-    }
-    ul {
-      list-style-position: inside; /* لضمان محاذاة النقاط */
-      padding: 0;
-    }
-    a {
-      color: #1a73e8;
-      text-decoration: none;
-    }
-    a:hover {
-      text-decoration: underline;
-    }
+
     .container {
       max-width: 800px;
       margin: auto;
       background: white;
       padding: 20px;
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      margin-bottom: 20px;
+    }
+
+    h1, h2 {
+      color: #444;
     }
   </style>
 </head>
 <body>
-  <div class="container">
+
+  <!-- قسم النص العربي -->
+  <div class="container arabic">
     <h1>سياسة الخصوصية لتطبيق وصل</h1>
-    <p><strong>آخر تحديث:</strong> <span id="last-updated"></span></p>
+    <p><strong>آخر تحديث:</strong> <span id="last-updated-ar"></span></p>
 
     <h2>1. المعلومات التي نجمعها:</h2>
     <h3>الوصول إلى الكاميرا:</h3>
@@ -99,96 +95,64 @@
     <p>إذا كان لديك أي استفسارات، يمكنك التواصل معنا عبر البريد الإلكتروني: <a href="mailto:waselappdev@gmail.com">waselappdev@gmail.com</a></p>
   </div>
 
-  <script>
-    // الحصول على التاريخ الحالي وتنسيقه
-    const today = new Date();
-    const formattedDate = today.toLocaleDateString('ar-EG', {
-      day: 'numeric',
-      month: 'numeric',
-      year: 'numeric'
-    });
-
-    // إدراج التاريخ في العنصر المحدد
-    document.getElementById('last-updated').textContent = formattedDate;
-  </script>
-</body>
-
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Privacy Policy</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background-color: #f4f4f4;
-      margin: 0;
-      padding: 20px;
-      line-height: 1.6;
-      direction: ltr; /* لضبط الاتجاه لليمين */
-      text-align: left; /* محاذاة النصوص لليمين */
-
-    }
-    h1 {
-      text-align: center;
-      color: #333;
-    }
-    h2 {
-      color: #444;
-      margin-top: 20px;
-    }
-    p {
-      margin: 10px 0;
-      color: #555;
-    }
-    a {
-      color: #1a73e8;
-      text-decoration: none;
-    }
-    a:hover {
-      text-decoration: underline;
-    }
-    .container {
-      max-width: 800px;
-      margin: auto;
-      background: white;
-      padding: 20px;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    }
-  </style>
-</head>
-<body>
-  <div class="container">
+  <!-- قسم النص الإنجليزي -->
+  <div class="container english">
     <h1>Wasel App Privacy Policy</h1>
-    <p><strong>Last Updated:</strong> 20/11/2024</p>
+    <p><strong>Last Updated:</strong> <span id="last-updated-en"></span></p>
 
     <h2>1. Information We Collect:</h2>
     <p><strong>Camera Access:</strong></p>
-    <p>The app uses the camera only for real-time hand gesture analysis.</p>
-    <p><strong>No photos or videos are recorded or stored</strong> on any server or within the app.</p>
-    <p>Only the <strong>start and end times</strong> of the gesture detection session are saved locally using <strong>Swift Data</strong> to improve the app’s performance. These timestamps are not shared with any third parties.</p>
-
+    <ul>
+    <li>The app uses the camera only for real-time hand gesture analysis.</li>
+    <li><strong>No photos or videos are recorded or stored</strong> on any server or within the app.</li>
+    <li>Only the <strong>start and end times</strong> of the gesture detection session are saved locally using <strong>Swift Data</strong> to improve the app’s performance. These timestamps are not shared with any third parties.</li>
+    </ul>ul>
     <p><strong>Text Input:</strong></p>
-    <p>When users input text to receive a translation into video, the text is used solely for this purpose. It is processed locally and not stored or shared beyond the immediate interaction.</p>
-
+    <ul>
+    <li>When users input text to receive a translation into video, the text is used solely for this purpose. It is processed locally and not stored or shared beyond the immediate interaction.</li>
+    </ul>ul>
     <h2>2. How We Use Your Data:</h2>
-    <p>All data collected (e.g., timestamps) is stored <strong>locally on your device</strong> and never shared or transmitted to external servers or third parties.</p>
-    <p>The app uses this information only to provide functionality and improve the user experience.</p>
-
+    <ul>
+    <li>All data collected (e.g., timestamps) is stored <strong>locally on your device</strong> and never shared or transmitted to external servers or third parties.</li>
+    <li>The app uses this information only to provide functionality and improve the user experience.</p>
+    </ul>ul>
     <h2>3. Data Security:</h2>
-    <p>We prioritize your privacy. All data is stored locally in a secure environment provided by <strong>SwiftData</strong>, and the app follows industry best practices to prevent unauthorized access.</p>
-
+    <ul>
+    <li>We prioritize your privacy. All data is stored locally in a secure environment provided by <strong>SwiftData</strong>, and the app follows industry best practices to prevent unauthorized access.</li>
+    </ul>ul>
     <h2>4. Third-Party Services:</h2>
-    <p>This app does not use or integrate with third-party services or analytics platforms that collect your personal information.</p>
-
+    <ul>
+    <li>This app does not use or integrate with third-party services or analytics platforms that collect your personal information.</p>
+    </ul>
     <h2>5. User Rights:</h2>
-    <p>As the app stores no personal information beyond local timestamps, users do not need to request data access or deletion. All data stays on the device and is removed automatically when the app is uninstalled.</p>
-
+    <ul>
+    <li>As the app stores no personal information beyond local timestamps, users do not need to request data access or deletion. All data stays on the device and is removed automatically when the app is uninstalled.</li>
+    </ul>
     <h2>6. Changes to This Policy:</h2>
-    <p>We may update this Privacy Policy from time to time. Any changes will be reflected here, with the updated date listed above. We encourage users to review the policy periodically.</p>
-
+    <ul>
+    <li>We may update this Privacy Policy from time to time. Any changes will be reflected here, with the updated date listed above. We encourage users to review the policy periodically.</li>
+    </ul>ul>
     <h2>Contact Us:</h2>
     <p>If you have any questions, contact us at: <a href="mailto:waselappdev@gmail.com">waselappdev@gmail.com</a></p>
   </div>
+
+
+  <script>
+    // تحديث التاريخ ديناميكيًا
+    const today = new Date();
+    const formattedDate = today.toLocaleDateString('ar-EG', {
+      day: 'numeric', month: 'numeric', year: 'numeric'
+    });
+
+    document.getElementById('last-updated-ar').textContent = formattedDate;
+    document.getElementById('last-updated-en').textContent = today.toLocaleDateString('en-US');
+  </script>
+
 </body>
 </html>
+
+
+
+
+
+
